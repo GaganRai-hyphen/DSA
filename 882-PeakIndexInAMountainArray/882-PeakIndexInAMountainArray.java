@@ -1,0 +1,16 @@
+// Last updated: 4/15/2026, 3:43:09 PM
+class Solution {
+    public int peakIndexInMountainArray(int[] arr) {
+        int s = 0 , e = arr.length-1;
+        while(s<e){
+            int mid = s+(e-s)/2;
+            if(arr[mid]<arr[mid+1]){
+                s = mid+1;
+            } 
+            else 
+            e = mid;
+        }
+        return s;
+        
+    }
+}
