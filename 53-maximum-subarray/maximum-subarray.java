@@ -8,9 +8,7 @@ class Solution {
             
            maxSum = Math.max(currentSum , maxSum);
 
-            if (currentSum < 0) {
-                currentSum = 0;
-            }
+           currentSum = Math.max(currentSum , 0);
         }
         
         return maxSum;
